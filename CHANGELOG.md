@@ -66,7 +66,3 @@ První vydání. Osobní desktopová aplikace pro sledování dlouhodobého ETF 
 - Aplikace není digitálně podepsaná – Windows ji při prvním spuštění může označit jako neznámou („Další informace → Přesto spustit“).
 - Přenosná verze se při každém spuštění rozbaluje (cca 10 s); instalovaná verze startuje okamžitě.
 - Projekce cíle je zjednodušená (konstantní výnos a kurz, bez inflace a daní).
-
-[1.2.0]: https://github.com/Miroslave11/portfolio-tracker/releases/tag/v1.2.0
-[1.1.0]: https://github.com/Miroslave11/portfolio-tracker/releases/tag/v1.1.0
-[1.0.0]: https://github.com/Miroslave11/portfolio-tracker/releases/tag/v1.0.0

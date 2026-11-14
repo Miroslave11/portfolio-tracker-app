@@ -2,7 +2,7 @@
 
 Osobní desktopová aplikace pro sledování dlouhodobého ETF portfolia napříč brokery Freedom24, XTB a Degiro. Inspirováno aplikací Portfolio Performance, ale úzce na míru.
 
-**Stav:** vydána verze **1.2.0** ([co obsahuje](CHANGELOG.md), [stažení instalátoru](https://github.com/Miroslave11/portfolio-tracker/releases/latest)). Další vývoj podle [plánu rozšíření](docs/04-plan-rozsireni.md). Dokumentace:
+**Stav:** vývojová verze (kód odpovídá verzi 1.2.0 a přírůstkům P20–P28, viz [co obsahuje](CHANGELOG.md)). Hotový instalátor zatím není vydaný – sestavíš ho příkazem `npm run build:win`. Další vývoj podle [plánu rozšíření](docs/04-plan-rozsireni.md). Dokumentace:
 
 - [Rozsah V1](docs/00-rozsah-mvp.md)
 - [Metaplán – architektura](docs/01-metaplan.md)
