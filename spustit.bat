@@ -24,6 +24,17 @@ if not exist node_modules (
   )
 )
 
+rem Novejsi npm nespousti instalacni skripty balicku automaticky, takze se nemusi stahnout program Electron.
+if not exist "node_modules\electron\path.txt" (
+  echo Stahuji program Electron...
+  call node node_modules\electron\install.js
+  if errorlevel 1 (
+    echo Stazeni Electronu selhalo.
+    pause
+    exit /b 1
+  )
+)
+
 set "PT_DATA_DIR=%~dp0vyvoj-data"
 echo Spoustim Portfolio Tracker (vyvojova data: %PT_DATA_DIR%)...
 call npm run dev

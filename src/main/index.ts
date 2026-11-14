@@ -1,5 +1,5 @@
 import { randomUUID } from 'crypto'
-import { app, BrowserWindow, dialog, ipcMain, net, shell } from 'electron'
+import { app, BrowserWindow, dialog, ipcMain, net, screen, shell } from 'electron'
 import { mkdir } from 'fs/promises'
 import { join } from 'path'
 import { electronApp, is, optimizer } from '@electron-toolkit/utils'
@@ -26,6 +26,7 @@ import { loadPortfolio, readImportFile, savePortfolio } from './portfolio-store'
 import { loadPriceCache, updatePrices, type Fetcher } from './price-service'
 import { loadSummaries, saveSummaries } from './summary-store'
 import { createUpdateManager, type UpdateManager } from './updater'
+import { centerOnWorkArea } from './window-placement'
 
 /**
  * Stahování přes síťovou vrstvu Chromia (net.fetch): na rozdíl od holého Node používá
@@ -58,9 +59,13 @@ let pendingImport: { id: string; portfolio: Portfolio } | null = null
 async function createWindow(): Promise<void> {
   const settings = await loadSettings(dataDir())
 
+  // Okno se otevře na displeji, kde je při spuštění kurzor myši (spuštění ze Start menu na externím
+  // monitoru ho otevře tam), ne vždy na hlavním displeji Windows (u notebooku často jeho vlastní).
+  const display = screen.getDisplayNearestPoint(screen.getCursorScreenPoint())
+  const bounds = centerOnWorkArea(display.workArea, { width: 1360, height: 860 })
+
   const mainWindow = new BrowserWindow({
-    width: 1360,
-    height: 860,
+    ...bounds,
     minWidth: 1100,
     minHeight: 700,
     show: false,

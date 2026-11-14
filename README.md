@@ -25,6 +25,8 @@ npm run typecheck  # kontrola typů
 npm run build:win  # instalátor (setup.exe) a latest.yml do složky dist/
 ```
 
+Pokud `npm run dev` skončí chybou „Electron uninstall“ (novější npm nespouští instalační skripty balíčků automaticky), stáhni program Electron příkazem `node node_modules/electron/install.js`. `spustit.bat` to dělá sám.
+
 ## Instalace
 
 Instalátor (`portfolio-tracker-<verze>-setup.exe`) najdeš na stránce [Releases](https://github.com/Miroslave11/portfolio-tracker-app/releases/latest); sestavit ho jde i příkazem `npm run build:win`. Instalace je jen pro aktuálního uživatele (bez práv správce).
