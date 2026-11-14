@@ -102,7 +102,7 @@ export async function writeArticleTexts(
   if (wanted.length === 0) {
     return {
       status: 'unavailable',
-      message: 'V Nastavení → Lokální AI není vybráno, co má AI psát.'
+      message: 'V Nastavení → Umělá inteligence není vybráno, co má AI psát.'
     }
   }
   const length = request.kind === 'month' ? ai.monthLength : ai.periodLength

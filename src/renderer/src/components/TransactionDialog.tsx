@@ -233,7 +233,7 @@ function TxForm({ portfolio, prices, edit, initialType, onClose }: FormProps): R
     try {
       if (edit) {
         await updateTransaction(edit.id, draft, withCounterpart && !!counterpart)
-        showNotice('Změny uloženy. Předchozí stav je v záloze (Nastavení → Data).')
+        showNotice('Změny uloženy. Předchozí stav je v záloze (Nastavení → Data a zálohy).')
       } else {
         await addTransactions([draft])
         showNotice(

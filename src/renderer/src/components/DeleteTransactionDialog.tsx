@@ -46,7 +46,7 @@ function DeleteForm({
     setError(null)
     try {
       await deleteTransaction(tx.id, withCounterpart && !!counterpart)
-      showNotice('Transakce smazána. Předchozí stav je v záloze (Nastavení → Data).')
+      showNotice('Transakce smazána. Předchozí stav je v záloze (Nastavení → Data a zálohy).')
       onClose()
     } catch (err) {
       setError(cleanError(err))

@@ -2,6 +2,18 @@
 
 Všechny podstatné změny aplikace Portfolio Tracker. Formát vychází z [Keep a Changelog](https://keepachangelog.com/cs/1.1.0/), verze podle [sémantického verzování](https://semver.org/lang/cs/).
 
+## [1.5.1] – 2026-11-14
+
+Přehlednější Nastavení.
+
+### Změněno
+
+- **Nastavení je rozdělené do částí** s podmenu vlevo: Vzhled, Obecné, Šablony (měsíční nákup), Umělá inteligence (včetně rozsahu a sekcí Shrnutí portfolia), Data a zálohy a Aplikace (aktualizace, verze, odkaz na GitHub). Obsah se nemění, jen se přeskupil a nic se neztratí. Odkaz „Rozsah“ na obrazovce Shrnutí otevře rovnou správnou část.
+
+### Poznámka
+
+- Toto vydání slouží zároveň jako první ověření automatické aktualizace z verze 1.5.0.
+
 ## [1.5.0] – 2026-11-14
 
 Automatické aktualizace.

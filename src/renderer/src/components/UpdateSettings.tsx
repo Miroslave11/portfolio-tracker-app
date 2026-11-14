@@ -3,7 +3,7 @@ import { updateStatusText } from '../../../shared/update'
 import { cleanError } from '../errors'
 import { useApp } from '../store'
 
-/** Nastavení → Obecné: automatické aktualizace aplikace (hledání nové verze na GitHubu). */
+/** Nastavení → Aplikace: automatické aktualizace aplikace (hledání nové verze na GitHubu). */
 export function UpdateSettings(): React.JSX.Element {
   const autoUpdate = useApp((s) => s.settings.autoUpdate)
   const updateSettings = useApp((s) => s.updateSettings)
@@ -29,7 +29,7 @@ export function UpdateSettings(): React.JSX.Element {
   const text = checkError ?? updateStatusText(update)
 
   return (
-    <div className="mt-4 border-t pt-4">
+    <div>
       <label className="flex cursor-pointer items-center gap-2">
         <input
           type="checkbox"

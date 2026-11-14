@@ -19,7 +19,7 @@ export type UpdateMode = 'enabled' | 'dev' | 'portable'
 export interface UpdateManagerOptions {
   updater: UpdaterLike
   mode: UpdateMode
-  /** Je zapnuté automatické hledání (Nastavení → Obecné)? Ruční kontrola funguje vždy. */
+  /** Je zapnuté automatické hledání (Nastavení → Aplikace)? Ruční kontrola funguje vždy. */
   isEnabled: () => boolean | Promise<boolean>
   onState: (state: UpdateState) => void
   startDelayMs?: number

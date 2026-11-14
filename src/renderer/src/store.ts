@@ -1,4 +1,5 @@
 import type { PlanRow } from '../../core/monthly-plan'
+import { DEFAULT_SETTINGS_TAB, type SettingsTab } from '../../core/settings-tabs'
 import { create } from 'zustand'
 import type { Portfolio, SecurityMetaPatch, TransactionDraft, TxType } from '../../shared/model'
 import { EMPTY_PRICE_CACHE, type PriceCache, type PriceUpdateReport } from '../../shared/prices'
@@ -73,6 +74,11 @@ interface AppState {
   setSummaryFocus(id: string | null): void
   setPaletteOpen(open: boolean): void
   setScreen(screen: ScreenId): void
+  /** Otevřená část obrazovky Nastavení (pamatuje se během běhu). */
+  settingsTab: SettingsTab
+  setSettingsTab(tab: SettingsTab): void
+  /** Otevře Nastavení rovnou na dané části (např. odkaz z jiné obrazovky). */
+  openSettings(tab: SettingsTab): void
   openTxDialog(state: TxDialogState): void
   closeTxDialog(): void
   showNotice(message: string | null, tone?: 'ok' | 'error'): void
@@ -121,6 +127,9 @@ export const useApp = create<AppState>((set, get) => ({
   setSummaryFocus: (summaryFocus) => set({ summaryFocus }),
   setPaletteOpen: (paletteOpen) => set({ paletteOpen }),
   setScreen: (screen) => set({ screen }),
+  settingsTab: DEFAULT_SETTINGS_TAB,
+  setSettingsTab: (settingsTab) => set({ settingsTab }),
+  openSettings: (settingsTab) => set({ screen: 'settings', settingsTab }),
   openTxDialog: (txDialog) => set({ txDialog, notice: null }),
   closeTxDialog: () => set({ txDialog: null }),
   showNotice: (notice, tone = 'ok') => set({ notice, noticeTone: tone }),

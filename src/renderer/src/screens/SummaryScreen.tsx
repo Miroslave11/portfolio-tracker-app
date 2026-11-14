@@ -62,6 +62,7 @@ export function SummaryScreen(): React.JSX.Element {
   const saveSummaries = useApp((s) => s.saveSummaries)
   const showNotice = useApp((s) => s.showNotice)
   const setScreen = useApp((s) => s.setScreen)
+  const openSettings = useApp((s) => s.openSettings)
   const summarySettings = useApp((s) => s.settings.summary)
   const ai = useApp((s) => s.settings.ai)
   const aiBusy = useApp((s) => s.summaryAiBusy)
@@ -241,9 +242,9 @@ export function SummaryScreen(): React.JSX.Element {
         )}
         <div className="ml-auto flex items-center gap-3">
           <button
-            onClick={() => setScreen('settings')}
+            onClick={() => openSettings('ai')}
             className="text-[13px] text-muted hover:text-accent hover:underline"
-            title="Rozsah a sekce článku nastavíš v Nastavení → Shrnutí portfolia"
+            title="Rozsah a sekce článku nastavíš v Nastavení → Umělá inteligence (Shrnutí portfolia)"
           >
             Rozsah ({KIND_LABEL[current.kind]}):{' '}
             {LEVEL_LABELS[levelOf(summarySettings[current.kind].sections, current.kind)]}
@@ -350,7 +351,7 @@ export function SummaryScreen(): React.JSX.Element {
                   onClick={() => void savePdf(current)}
                   disabled={busy || aiBusy !== null}
                   className={btn}
-                  title="Uloží celý článek jako PDF (A4) se sekcemi podle Nastavení → Shrnutí portfolia"
+                  title="Uloží celý článek jako PDF (A4) se sekcemi podle Nastavení → Umělá inteligence (Shrnutí portfolia)"
                 >
                   <FileText size={14} />
                   PDF
