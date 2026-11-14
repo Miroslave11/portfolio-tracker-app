@@ -1,0 +1,1281 @@
+{
+  "version": 1,
+  "transactions": [
+    {
+      "type": "PURCHASE",
+      "account": "XTB - EUR cash",
+      "portfolio": "XTB - EUR portfolio",
+      "date": "2023-01-19",
+      "currency": "EUR",
+      "amount": 809.96,
+      "shares": 2,
+      "security": {
+        "name": "SXR8.DE",
+        "isin": "IE00B5BMR087",
+        "ticker": "SXR8.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "XTB - EUR cash",
+      "date": "2023-01-19",
+      "currency": "EUR",
+      "amount": 809.96
+    },
+    {
+      "type": "PURCHASE",
+      "account": "Degiro - EUR cash",
+      "portfolio": "Degiro - EUR portfolio",
+      "date": "2023-02-13",
+      "currency": "EUR",
+      "amount": 672.23,
+      "shares": 8,
+      "security": {
+        "name": "SXRV.DE",
+        "isin": "IE00B53SZB19",
+        "ticker": "SXRV.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "Degiro - EUR cash",
+      "date": "2023-02-13",
+      "currency": "EUR",
+      "amount": 672.23
+    },
+    {
+      "type": "PURCHASE",
+      "account": "Freedom24",
+      "portfolio": "Freedom24",
+      "date": "2023-03-12",
+      "currency": "EUR",
+      "amount": 643.05,
+      "shares": 25,
+      "security": {
+        "name": "EXUS.DE",
+        "isin": "IE0006WW1TQ4",
+        "ticker": "EXUS.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "Freedom24",
+      "date": "2023-03-12",
+      "currency": "EUR",
+      "amount": 643.05
+    },
+    {
+      "type": "PURCHASE",
+      "account": "XTB - EUR cash",
+      "portfolio": "XTB - EUR portfolio",
+      "date": "2023-04-12",
+      "currency": "EUR",
+      "amount": 383.47,
+      "shares": 5,
+      "security": {
+        "name": "EUNL.DE",
+        "isin": "IE00B4L5Y983",
+        "ticker": "EUNL.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "XTB - EUR cash",
+      "date": "2023-04-12",
+      "currency": "EUR",
+      "amount": 383.47
+    },
+    {
+      "type": "PURCHASE",
+      "account": "Degiro - EUR cash",
+      "portfolio": "Degiro - EUR portfolio",
+      "date": "2023-04-17",
+      "currency": "EUR",
+      "amount": 227.2,
+      "shares": 3,
+      "security": {
+        "name": "EUNL.DE",
+        "isin": "IE00B4L5Y983",
+        "ticker": "EUNL.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "Degiro - EUR cash",
+      "date": "2023-04-17",
+      "currency": "EUR",
+      "amount": 227.2
+    },
+    {
+      "type": "PURCHASE",
+      "account": "Degiro - EUR cash",
+      "portfolio": "Degiro - EUR portfolio",
+      "date": "2023-05-14",
+      "currency": "EUR",
+      "amount": 770.8,
+      "shares": 10,
+      "security": {
+        "name": "EUNL.DE",
+        "isin": "IE00B4L5Y983",
+        "ticker": "EUNL.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "Degiro - EUR cash",
+      "date": "2023-05-14",
+      "currency": "EUR",
+      "amount": 770.8
+    },
+    {
+      "type": "PURCHASE",
+      "account": "Freedom24",
+      "portfolio": "Freedom24",
+      "date": "2023-06-20",
+      "currency": "EUR",
+      "amount": 430.64,
+      "shares": 1,
+      "security": {
+        "name": "SXR8.DE",
+        "isin": "IE00B5BMR087",
+        "ticker": "SXR8.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "Freedom24",
+      "date": "2023-06-20",
+      "currency": "EUR",
+      "amount": 430.64
+    },
+    {
+      "type": "PURCHASE",
+      "account": "XTB - EUR cash",
+      "portfolio": "XTB - EUR portfolio",
+      "date": "2023-07-13",
+      "currency": "EUR",
+      "amount": 426.8,
+      "shares": 1,
+      "security": {
+        "name": "SXR8.DE",
+        "isin": "IE00B5BMR087",
+        "ticker": "SXR8.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "XTB - EUR cash",
+      "date": "2023-07-13",
+      "currency": "EUR",
+      "amount": 426.8
+    },
+    {
+      "type": "PURCHASE",
+      "account": "Degiro - EUR cash",
+      "portfolio": "Degiro - EUR portfolio",
+      "date": "2023-08-15",
+      "currency": "EUR",
+      "amount": 619.32,
+      "shares": 8,
+      "security": {
+        "name": "EUNL.DE",
+        "isin": "IE00B4L5Y983",
+        "ticker": "EUNL.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "Degiro - EUR cash",
+      "date": "2023-08-15",
+      "currency": "EUR",
+      "amount": 619.32
+    },
+    {
+      "type": "PURCHASE",
+      "account": "Freedom24",
+      "portfolio": "Freedom24",
+      "date": "2023-08-20",
+      "currency": "EUR",
+      "amount": 429.28,
+      "shares": 1,
+      "security": {
+        "name": "SXR8.DE",
+        "isin": "IE00B5BMR087",
+        "ticker": "SXR8.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "Freedom24",
+      "date": "2023-08-20",
+      "currency": "EUR",
+      "amount": 429.28
+    },
+    {
+      "type": "PURCHASE",
+      "account": "Freedom24",
+      "portfolio": "Freedom24",
+      "date": "2023-09-16",
+      "currency": "EUR",
+      "amount": 431.98,
+      "shares": 1,
+      "security": {
+        "name": "SXR8.DE",
+        "isin": "IE00B5BMR087",
+        "ticker": "SXR8.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "Freedom24",
+      "date": "2023-09-16",
+      "currency": "EUR",
+      "amount": 431.98
+    },
+    {
+      "type": "PURCHASE",
+      "account": "XTB - EUR cash",
+      "portfolio": "XTB - EUR portfolio",
+      "date": "2023-10-06",
+      "currency": "EUR",
+      "amount": 547.36,
+      "shares": 7,
+      "security": {
+        "name": "EUNL.DE",
+        "isin": "IE00B4L5Y983",
+        "ticker": "EUNL.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "XTB - EUR cash",
+      "date": "2023-10-06",
+      "currency": "EUR",
+      "amount": 547.36
+    },
+    {
+      "type": "PURCHASE",
+      "account": "Degiro - EUR cash",
+      "portfolio": "Degiro - EUR portfolio",
+      "date": "2023-11-10",
+      "currency": "EUR",
+      "amount": 535.9,
+      "shares": 7,
+      "security": {
+        "name": "EUNL.DE",
+        "isin": "IE00B4L5Y983",
+        "ticker": "EUNL.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "Degiro - EUR cash",
+      "date": "2023-11-10",
+      "currency": "EUR",
+      "amount": 535.9
+    },
+    {
+      "type": "PURCHASE",
+      "account": "Freedom24",
+      "portfolio": "Freedom24",
+      "date": "2023-12-19",
+      "currency": "EUR",
+      "amount": 430.47,
+      "shares": 1,
+      "security": {
+        "name": "SXR8.DE",
+        "isin": "IE00B5BMR087",
+        "ticker": "SXR8.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "Freedom24",
+      "date": "2023-12-19",
+      "currency": "EUR",
+      "amount": 430.47
+    },
+    {
+      "type": "PURCHASE",
+      "account": "XTB - EUR cash",
+      "portfolio": "XTB - EUR portfolio",
+      "date": "2023-12-24",
+      "currency": "EUR",
+      "amount": 435.41,
+      "shares": 1,
+      "security": {
+        "name": "SXR8.DE",
+        "isin": "IE00B5BMR087",
+        "ticker": "SXR8.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "XTB - EUR cash",
+      "date": "2023-12-24",
+      "currency": "EUR",
+      "amount": 435.41
+    },
+    {
+      "type": "PURCHASE",
+      "account": "XTB - EUR cash",
+      "portfolio": "XTB - EUR portfolio",
+      "date": "2024-01-10",
+      "currency": "EUR",
+      "amount": 628.86,
+      "shares": 8,
+      "security": {
+        "name": "EUNL.DE",
+        "isin": "IE00B4L5Y983",
+        "ticker": "EUNL.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "XTB - EUR cash",
+      "date": "2024-01-10",
+      "currency": "EUR",
+      "amount": 628.86
+    },
+    {
+      "type": "PURCHASE",
+      "account": "Degiro - EUR cash",
+      "portfolio": "Degiro - EUR portfolio",
+      "date": "2024-02-14",
+      "currency": "EUR",
+      "amount": 459.57,
+      "shares": 5,
+      "security": {
+        "name": "SXRV.DE",
+        "isin": "IE00B53SZB19",
+        "ticker": "SXRV.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "Degiro - EUR cash",
+      "date": "2024-02-14",
+      "currency": "EUR",
+      "amount": 459.57
+    },
+    {
+      "type": "PURCHASE",
+      "account": "Freedom24",
+      "portfolio": "Freedom24",
+      "date": "2024-03-16",
+      "currency": "EUR",
+      "amount": 450.74,
+      "shares": 18,
+      "security": {
+        "name": "EXUS.DE",
+        "isin": "IE0006WW1TQ4",
+        "ticker": "EXUS.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "Freedom24",
+      "date": "2024-03-16",
+      "currency": "EUR",
+      "amount": 450.74
+    },
+    {
+      "type": "PURCHASE",
+      "account": "XTB - EUR cash",
+      "portfolio": "XTB - EUR portfolio",
+      "date": "2024-04-15",
+      "currency": "EUR",
+      "amount": 746.1,
+      "shares": 9,
+      "security": {
+        "name": "EUNL.DE",
+        "isin": "IE00B4L5Y983",
+        "ticker": "EUNL.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "XTB - EUR cash",
+      "date": "2024-04-15",
+      "currency": "EUR",
+      "amount": 746.1
+    },
+    {
+      "type": "PURCHASE",
+      "account": "Degiro - EUR cash",
+      "portfolio": "Degiro - EUR portfolio",
+      "date": "2024-04-20",
+      "currency": "EUR",
+      "amount": 251.81,
+      "shares": 3,
+      "security": {
+        "name": "EUNL.DE",
+        "isin": "IE00B4L5Y983",
+        "ticker": "EUNL.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "Degiro - EUR cash",
+      "date": "2024-04-20",
+      "currency": "EUR",
+      "amount": 251.81
+    },
+    {
+      "type": "PURCHASE",
+      "account": "Degiro - EUR cash",
+      "portfolio": "Degiro - EUR portfolio",
+      "date": "2024-05-14",
+      "currency": "EUR",
+      "amount": 798.45,
+      "shares": 8,
+      "security": {
+        "name": "SXRV.DE",
+        "isin": "IE00B53SZB19",
+        "ticker": "SXRV.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "Degiro - EUR cash",
+      "date": "2024-05-14",
+      "currency": "EUR",
+      "amount": 798.45
+    },
+    {
+      "type": "PURCHASE",
+      "account": "Freedom24",
+      "portfolio": "Freedom24",
+      "date": "2024-06-22",
+      "currency": "EUR",
+      "amount": 344.17,
+      "shares": 13,
+      "security": {
+        "name": "EXUS.DE",
+        "isin": "IE0006WW1TQ4",
+        "ticker": "EXUS.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "Freedom24",
+      "date": "2024-06-22",
+      "currency": "EUR",
+      "amount": 344.17
+    },
+    {
+      "type": "PURCHASE",
+      "account": "XTB - EUR cash",
+      "portfolio": "XTB - EUR portfolio",
+      "date": "2024-07-17",
+      "currency": "EUR",
+      "amount": 629.78,
+      "shares": 7,
+      "security": {
+        "name": "EUNL.DE",
+        "isin": "IE00B4L5Y983",
+        "ticker": "EUNL.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "XTB - EUR cash",
+      "date": "2024-07-17",
+      "currency": "EUR",
+      "amount": 629.78
+    },
+    {
+      "type": "PURCHASE",
+      "account": "Degiro - EUR cash",
+      "portfolio": "Degiro - EUR portfolio",
+      "date": "2024-08-18",
+      "currency": "EUR",
+      "amount": 560.99,
+      "shares": 6,
+      "security": {
+        "name": "EUNL.DE",
+        "isin": "IE00B4L5Y983",
+        "ticker": "EUNL.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "Degiro - EUR cash",
+      "date": "2024-08-18",
+      "currency": "EUR",
+      "amount": 560.99
+    },
+    {
+      "type": "PURCHASE",
+      "account": "Freedom24",
+      "portfolio": "Freedom24",
+      "date": "2024-08-23",
+      "currency": "EUR",
+      "amount": 508.64,
+      "shares": 1,
+      "security": {
+        "name": "SXR8.DE",
+        "isin": "IE00B5BMR087",
+        "ticker": "SXR8.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "Freedom24",
+      "date": "2024-08-23",
+      "currency": "EUR",
+      "amount": 508.64
+    },
+    {
+      "type": "PURCHASE",
+      "account": "Freedom24",
+      "portfolio": "Freedom24",
+      "date": "2024-09-11",
+      "currency": "EUR",
+      "amount": 517.24,
+      "shares": 1,
+      "security": {
+        "name": "SXR8.DE",
+        "isin": "IE00B5BMR087",
+        "ticker": "SXR8.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "Freedom24",
+      "date": "2024-09-11",
+      "currency": "EUR",
+      "amount": 517.24
+    },
+    {
+      "type": "PURCHASE",
+      "account": "XTB - EUR cash",
+      "portfolio": "XTB - EUR portfolio",
+      "date": "2024-10-21",
+      "currency": "EUR",
+      "amount": 533.5,
+      "shares": 1,
+      "security": {
+        "name": "SXR8.DE",
+        "isin": "IE00B5BMR087",
+        "ticker": "SXR8.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "XTB - EUR cash",
+      "date": "2024-10-21",
+      "currency": "EUR",
+      "amount": 533.5
+    },
+    {
+      "type": "PURCHASE",
+      "account": "Degiro - EUR cash",
+      "portfolio": "Degiro - EUR portfolio",
+      "date": "2024-11-15",
+      "currency": "EUR",
+      "amount": 483.48,
+      "shares": 5,
+      "security": {
+        "name": "EUNL.DE",
+        "isin": "IE00B4L5Y983",
+        "ticker": "EUNL.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "Degiro - EUR cash",
+      "date": "2024-11-15",
+      "currency": "EUR",
+      "amount": 483.48
+    },
+    {
+      "type": "PURCHASE",
+      "account": "Freedom24",
+      "portfolio": "Freedom24",
+      "date": "2024-12-08",
+      "currency": "EUR",
+      "amount": 663.19,
+      "shares": 23,
+      "security": {
+        "name": "EXUS.DE",
+        "isin": "IE0006WW1TQ4",
+        "ticker": "EXUS.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "Freedom24",
+      "date": "2024-12-08",
+      "currency": "EUR",
+      "amount": 663.19
+    },
+    {
+      "type": "PURCHASE",
+      "account": "XTB - EUR cash",
+      "portfolio": "XTB - EUR portfolio",
+      "date": "2024-12-13",
+      "currency": "EUR",
+      "amount": 585.56,
+      "shares": 6,
+      "security": {
+        "name": "EUNL.DE",
+        "isin": "IE00B4L5Y983",
+        "ticker": "EUNL.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "XTB - EUR cash",
+      "date": "2024-12-13",
+      "currency": "EUR",
+      "amount": 585.56
+    },
+    {
+      "type": "PURCHASE",
+      "account": "XTB - EUR cash",
+      "portfolio": "XTB - EUR portfolio",
+      "date": "2025-01-16",
+      "currency": "EUR",
+      "amount": 688.77,
+      "shares": 7,
+      "security": {
+        "name": "EUNL.DE",
+        "isin": "IE00B4L5Y983",
+        "ticker": "EUNL.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "XTB - EUR cash",
+      "date": "2025-01-16",
+      "currency": "EUR",
+      "amount": 688.77
+    },
+    {
+      "type": "PURCHASE",
+      "account": "Degiro - EUR cash",
+      "portfolio": "Degiro - EUR portfolio",
+      "date": "2025-02-15",
+      "currency": "EUR",
+      "amount": 496.27,
+      "shares": 5,
+      "security": {
+        "name": "EUNL.DE",
+        "isin": "IE00B4L5Y983",
+        "ticker": "EUNL.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "Degiro - EUR cash",
+      "date": "2025-02-15",
+      "currency": "EUR",
+      "amount": 496.27
+    },
+    {
+      "type": "PURCHASE",
+      "account": "Freedom24",
+      "portfolio": "Freedom24",
+      "date": "2025-03-14",
+      "currency": "EUR",
+      "amount": 532.44,
+      "shares": 1,
+      "security": {
+        "name": "SXR8.DE",
+        "isin": "IE00B5BMR087",
+        "ticker": "SXR8.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "Freedom24",
+      "date": "2025-03-14",
+      "currency": "EUR",
+      "amount": 532.44
+    },
+    {
+      "type": "PURCHASE",
+      "account": "XTB - EUR cash",
+      "portfolio": "XTB - EUR portfolio",
+      "date": "2025-04-08",
+      "currency": "EUR",
+      "amount": 580.2,
+      "shares": 6,
+      "security": {
+        "name": "EUNL.DE",
+        "isin": "IE00B4L5Y983",
+        "ticker": "EUNL.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "XTB - EUR cash",
+      "date": "2025-04-08",
+      "currency": "EUR",
+      "amount": 580.2
+    },
+    {
+      "type": "PURCHASE",
+      "account": "Degiro - EUR cash",
+      "portfolio": "Degiro - EUR portfolio",
+      "date": "2025-04-13",
+      "currency": "EUR",
+      "amount": 388.9,
+      "shares": 4,
+      "security": {
+        "name": "EUNL.DE",
+        "isin": "IE00B4L5Y983",
+        "ticker": "EUNL.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "Degiro - EUR cash",
+      "date": "2025-04-13",
+      "currency": "EUR",
+      "amount": 388.9
+    },
+    {
+      "type": "PURCHASE",
+      "account": "Degiro - EUR cash",
+      "portfolio": "Degiro - EUR portfolio",
+      "date": "2025-05-08",
+      "currency": "EUR",
+      "amount": 391.64,
+      "shares": 4,
+      "security": {
+        "name": "EUNL.DE",
+        "isin": "IE00B4L5Y983",
+        "ticker": "EUNL.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "Degiro - EUR cash",
+      "date": "2025-05-08",
+      "currency": "EUR",
+      "amount": 391.64
+    },
+    {
+      "type": "PURCHASE",
+      "account": "Freedom24",
+      "portfolio": "Freedom24",
+      "date": "2025-06-06",
+      "currency": "EUR",
+      "amount": 461.03,
+      "shares": 17,
+      "security": {
+        "name": "EXUS.DE",
+        "isin": "IE0006WW1TQ4",
+        "ticker": "EXUS.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "Freedom24",
+      "date": "2025-06-06",
+      "currency": "EUR",
+      "amount": 461.03
+    },
+    {
+      "type": "PURCHASE",
+      "account": "XTB - EUR cash",
+      "portfolio": "XTB - EUR portfolio",
+      "date": "2025-07-10",
+      "currency": "EUR",
+      "amount": 774.79,
+      "shares": 8,
+      "security": {
+        "name": "EUNL.DE",
+        "isin": "IE00B4L5Y983",
+        "ticker": "EUNL.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "XTB - EUR cash",
+      "date": "2025-07-10",
+      "currency": "EUR",
+      "amount": 774.79
+    },
+    {
+      "type": "PURCHASE",
+      "account": "Degiro - EUR cash",
+      "portfolio": "Degiro - EUR portfolio",
+      "date": "2025-08-07",
+      "currency": "EUR",
+      "amount": 806.43,
+      "shares": 7,
+      "security": {
+        "name": "SXRV.DE",
+        "isin": "IE00B53SZB19",
+        "ticker": "SXRV.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "Degiro - EUR cash",
+      "date": "2025-08-07",
+      "currency": "EUR",
+      "amount": 806.43
+    },
+    {
+      "type": "PURCHASE",
+      "account": "Freedom24",
+      "portfolio": "Freedom24",
+      "date": "2025-08-12",
+      "currency": "EUR",
+      "amount": 542.32,
+      "shares": 1,
+      "security": {
+        "name": "SXR8.DE",
+        "isin": "IE00B5BMR087",
+        "ticker": "SXR8.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "Freedom24",
+      "date": "2025-08-12",
+      "currency": "EUR",
+      "amount": 542.32
+    },
+    {
+      "type": "PURCHASE",
+      "account": "Freedom24",
+      "portfolio": "Freedom24",
+      "date": "2025-09-11",
+      "currency": "EUR",
+      "amount": 536.77,
+      "shares": 1,
+      "security": {
+        "name": "SXR8.DE",
+        "isin": "IE00B5BMR087",
+        "ticker": "SXR8.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "Freedom24",
+      "date": "2025-09-11",
+      "currency": "EUR",
+      "amount": 536.77
+    },
+    {
+      "type": "PURCHASE",
+      "account": "XTB - EUR cash",
+      "portfolio": "XTB - EUR portfolio",
+      "date": "2025-10-13",
+      "currency": "EUR",
+      "amount": 703.76,
+      "shares": 7,
+      "security": {
+        "name": "EUNL.DE",
+        "isin": "IE00B4L5Y983",
+        "ticker": "EUNL.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "XTB - EUR cash",
+      "date": "2025-10-13",
+      "currency": "EUR",
+      "amount": 703.76
+    },
+    {
+      "type": "PURCHASE",
+      "account": "Degiro - EUR cash",
+      "portfolio": "Degiro - EUR portfolio",
+      "date": "2025-11-19",
+      "currency": "EUR",
+      "amount": 616.12,
+      "shares": 5,
+      "security": {
+        "name": "SXRV.DE",
+        "isin": "IE00B53SZB19",
+        "ticker": "SXRV.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "Degiro - EUR cash",
+      "date": "2025-11-19",
+      "currency": "EUR",
+      "amount": 616.12
+    },
+    {
+      "type": "PURCHASE",
+      "account": "Freedom24",
+      "portfolio": "Freedom24",
+      "date": "2025-12-14",
+      "currency": "EUR",
+      "amount": 572.6,
+      "shares": 1,
+      "security": {
+        "name": "SXR8.DE",
+        "isin": "IE00B5BMR087",
+        "ticker": "SXR8.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "Freedom24",
+      "date": "2025-12-14",
+      "currency": "EUR",
+      "amount": 572.6
+    },
+    {
+      "type": "PURCHASE",
+      "account": "XTB - EUR cash",
+      "portfolio": "XTB - EUR portfolio",
+      "date": "2025-12-19",
+      "currency": "EUR",
+      "amount": 427.38,
+      "shares": 4,
+      "security": {
+        "name": "EUNL.DE",
+        "isin": "IE00B4L5Y983",
+        "ticker": "EUNL.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "XTB - EUR cash",
+      "date": "2025-12-19",
+      "currency": "EUR",
+      "amount": 427.38
+    },
+    {
+      "type": "PURCHASE",
+      "account": "XTB - EUR cash",
+      "portfolio": "XTB - EUR portfolio",
+      "date": "2026-01-11",
+      "currency": "EUR",
+      "amount": 593.66,
+      "shares": 1,
+      "security": {
+        "name": "SXR8.DE",
+        "isin": "IE00B5BMR087",
+        "ticker": "SXR8.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "XTB - EUR cash",
+      "date": "2026-01-11",
+      "currency": "EUR",
+      "amount": 593.66
+    },
+    {
+      "type": "PURCHASE",
+      "account": "Degiro - EUR cash",
+      "portfolio": "Degiro - EUR portfolio",
+      "date": "2026-02-09",
+      "currency": "EUR",
+      "amount": 781.63,
+      "shares": 7,
+      "security": {
+        "name": "EUNL.DE",
+        "isin": "IE00B4L5Y983",
+        "ticker": "EUNL.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "Degiro - EUR cash",
+      "date": "2026-02-09",
+      "currency": "EUR",
+      "amount": 781.63
+    },
+    {
+      "type": "PURCHASE",
+      "account": "Freedom24",
+      "portfolio": "Freedom24",
+      "date": "2026-03-20",
+      "currency": "EUR",
+      "amount": 615.9,
+      "shares": 1,
+      "security": {
+        "name": "SXR8.DE",
+        "isin": "IE00B5BMR087",
+        "ticker": "SXR8.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "Freedom24",
+      "date": "2026-03-20",
+      "currency": "EUR",
+      "amount": 615.9
+    },
+    {
+      "type": "PURCHASE",
+      "account": "XTB - EUR cash",
+      "portfolio": "XTB - EUR portfolio",
+      "date": "2026-04-06",
+      "currency": "EUR",
+      "amount": 643.4,
+      "shares": 1,
+      "security": {
+        "name": "SXR8.DE",
+        "isin": "IE00B5BMR087",
+        "ticker": "SXR8.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "XTB - EUR cash",
+      "date": "2026-04-06",
+      "currency": "EUR",
+      "amount": 643.4
+    },
+    {
+      "type": "PURCHASE",
+      "account": "Degiro - EUR cash",
+      "portfolio": "Degiro - EUR portfolio",
+      "date": "2026-04-11",
+      "currency": "EUR",
+      "amount": 231.85,
+      "shares": 2,
+      "security": {
+        "name": "EUNL.DE",
+        "isin": "IE00B4L5Y983",
+        "ticker": "EUNL.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "Degiro - EUR cash",
+      "date": "2026-04-11",
+      "currency": "EUR",
+      "amount": 231.85
+    },
+    {
+      "type": "SALE",
+      "account": "XTB - EUR cash",
+      "portfolio": "XTB - EUR portfolio",
+      "date": "2026-05-12",
+      "currency": "EUR",
+      "amount": 233.94,
+      "shares": 2,
+      "security": {
+        "name": "EUNL.DE",
+        "isin": "IE00B4L5Y983",
+        "ticker": "EUNL.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "REMOVAL",
+      "account": "XTB - EUR cash",
+      "date": "2026-05-12",
+      "currency": "EUR",
+      "amount": 233.94
+    },
+    {
+      "type": "PURCHASE",
+      "account": "Degiro - EUR cash",
+      "portfolio": "Degiro - EUR portfolio",
+      "date": "2026-05-17",
+      "currency": "EUR",
+      "amount": 705.37,
+      "shares": 6,
+      "security": {
+        "name": "EUNL.DE",
+        "isin": "IE00B4L5Y983",
+        "ticker": "EUNL.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "Degiro - EUR cash",
+      "date": "2026-05-17",
+      "currency": "EUR",
+      "amount": 705.37
+    },
+    {
+      "type": "PURCHASE",
+      "account": "Freedom24",
+      "portfolio": "Freedom24",
+      "date": "2026-06-06",
+      "currency": "EUR",
+      "amount": 635.75,
+      "shares": 20,
+      "security": {
+        "name": "EXUS.DE",
+        "isin": "IE0006WW1TQ4",
+        "ticker": "EXUS.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "Freedom24",
+      "date": "2026-06-06",
+      "currency": "EUR",
+      "amount": 635.75
+    },
+    {
+      "type": "PURCHASE",
+      "account": "XTB - EUR cash",
+      "portfolio": "XTB - EUR portfolio",
+      "date": "2026-07-19",
+      "currency": "EUR",
+      "amount": 646.63,
+      "shares": 1,
+      "security": {
+        "name": "SXR8.DE",
+        "isin": "IE00B5BMR087",
+        "ticker": "SXR8.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "XTB - EUR cash",
+      "date": "2026-07-19",
+      "currency": "EUR",
+      "amount": 646.63
+    },
+    {
+      "type": "PURCHASE",
+      "account": "Degiro - EUR cash",
+      "portfolio": "Degiro - EUR portfolio",
+      "date": "2026-08-14",
+      "currency": "EUR",
+      "amount": 357.04,
+      "shares": 3,
+      "security": {
+        "name": "EUNL.DE",
+        "isin": "IE00B4L5Y983",
+        "ticker": "EUNL.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "Degiro - EUR cash",
+      "date": "2026-08-14",
+      "currency": "EUR",
+      "amount": 357.04
+    },
+    {
+      "type": "PURCHASE",
+      "account": "Freedom24",
+      "portfolio": "Freedom24",
+      "date": "2026-08-19",
+      "currency": "EUR",
+      "amount": 640.11,
+      "shares": 1,
+      "security": {
+        "name": "SXR8.DE",
+        "isin": "IE00B5BMR087",
+        "ticker": "SXR8.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "Freedom24",
+      "date": "2026-08-19",
+      "currency": "EUR",
+      "amount": 640.11
+    },
+    {
+      "type": "PURCHASE",
+      "account": "Freedom24",
+      "portfolio": "Freedom24",
+      "date": "2026-09-16",
+      "currency": "EUR",
+      "amount": 645.48,
+      "shares": 1,
+      "security": {
+        "name": "SXR8.DE",
+        "isin": "IE00B5BMR087",
+        "ticker": "SXR8.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "Freedom24",
+      "date": "2026-09-16",
+      "currency": "EUR",
+      "amount": 645.48
+    },
+    {
+      "type": "PURCHASE",
+      "account": "XTB - EUR cash",
+      "portfolio": "XTB - EUR portfolio",
+      "date": "2026-10-20",
+      "currency": "EUR",
+      "amount": 639.62,
+      "shares": 1,
+      "security": {
+        "name": "SXR8.DE",
+        "isin": "IE00B5BMR087",
+        "ticker": "SXR8.DE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "type": "DEPOSIT",
+      "account": "XTB - EUR cash",
+      "date": "2026-10-20",
+      "currency": "EUR",
+      "amount": 639.62
+    }
+  ]
+}

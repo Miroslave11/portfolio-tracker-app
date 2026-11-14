@@ -38,3 +38,10 @@ se po přeinstalování najdou. Zálohu si lze otevřít v Nastavení → Data.
 ## Data
 
 Osobní data (transakce, cache kurzů) se ukládají mimo repozitář do `%APPDATA%/portfolio-tracker/`. Exporty transakcí (`*transakce*.json`) jsou v `.gitignore`.
+
+## Vyzkoušení bez vlastních dat
+
+V repozitáři je vymyšlený ukázkový export [`examples/ukazka-portfolio-performance.json`](examples/ukazka-portfolio-performance.json)
+(3 účty, 4 ETF, měsíční nákupy 2023–2026 a jeden prodej; žádná skutečná data). Na prázdném Přehledu klikni na
+**Importovat**, vyber tento soubor a potvrď náhled. Hodnoty se dopočítají z aktuálních kurzů, které aplikace stáhne
+z Yahoo Finance a ČNB. Soubor vzniká skriptem `node scripts/generate-example.mjs`.
