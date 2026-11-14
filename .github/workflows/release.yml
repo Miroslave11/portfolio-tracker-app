@@ -1,0 +1,49 @@
+name: Release
+
+# Vydání verze: po pushnutí tagu v* (např. v1.0.0) se sestaví instalátor a portable .exe
+# a připojí se ke GitHub Release. Přílohy vydání se nepočítají do kvóty artefaktů Actions.
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: windows-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Instalace závislostí
+        run: npm ci
+
+      - name: Kontroly
+        run: |
+          npm run lint
+          npm run typecheck
+          npm test
+
+      - name: Poznámky k vydání (z CHANGELOG.md, ověří i shodu verze s package.json)
+        run: node scripts/release-notes.mjs ${{ github.ref_name }} > release-notes.md
+
+      - name: Balíček pro Windows (instalátor + portable)
+        run: |
+          npx electron-vite build
+          npx electron-builder --win --publish never
+
+      - name: GitHub Release
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: >
+          gh release create "${{ github.ref_name }}"
+          dist/*-setup.exe dist/*-portable.exe
+          --title "Portfolio Tracker ${{ github.ref_name }}"
+          --notes-file release-notes.md

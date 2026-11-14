@@ -1,0 +1,15 @@
+node_modules
+dist
+out
+coverage
+.DS_Store
+.eslintcache
+*.log*
+
+# Osobní finanční data – nikdy necommitovat
+Všechny_transakce.json
+*transakce*.json
+data/
+
+# Lokální testy na skutečných datech (obsahují osobní čísla)
+*.local.test.ts

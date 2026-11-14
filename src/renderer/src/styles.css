@@ -1,0 +1,139 @@
+@import 'tailwindcss';
+
+/*
+ * Motivy = sady CSS proměnných. Atribut data-theme lze dát na <html>
+ * (celá appka) i na libovolný prvek (např. náhled motivu v Nastavení).
+ */
+:root,
+[data-theme='dark'] {
+  --bg: #0f1115;
+  --surface: #171a21;
+  --surface2: #1f2330;
+  --border: #2a2f3d;
+  --text: #e8eaf0;
+  --muted: #8b92a5;
+  --pos: #22c55e;
+  --neg: #ef4444;
+  --shadow: 0 8px 30px rgb(0 0 0 / 0.35);
+  color-scheme: dark;
+}
+
+[data-theme='light'] {
+  --bg: #f4f6fa;
+  --surface: #ffffff;
+  --surface2: #eef1f6;
+  --border: #dde2ea;
+  --text: #141821;
+  --muted: #5e6678;
+  --pos: #16a34a;
+  --neg: #dc2626;
+  --shadow: 0 8px 24px rgb(20 24 33 / 0.08);
+  color-scheme: light;
+}
+
+[data-theme='midnight'] {
+  --bg: #0b1226;
+  --surface: #111a33;
+  --surface2: #18233f;
+  --border: #24314f;
+  --text: #e6ecff;
+  --muted: #8a97b8;
+  --pos: #34d399;
+  --neg: #f87171;
+  --shadow: 0 8px 30px rgb(0 0 0 / 0.4);
+  color-scheme: dark;
+}
+
+[data-theme='oled'] {
+  --bg: #000000;
+  --surface: #0a0a0a;
+  --surface2: #141414;
+  --border: #222222;
+  --text: #f2f2f2;
+  --muted: #8a8a8a;
+  --pos: #22c55e;
+  --neg: #ef4444;
+  --shadow: none;
+  color-scheme: dark;
+}
+
+[data-theme='warm'] {
+  --bg: #f6f0e6;
+  --surface: #fffaf2;
+  --surface2: #f0e7d8;
+  --border: #e2d5c0;
+  --text: #2b2318;
+  --muted: #7a6a55;
+  --pos: #15803d;
+  --neg: #b91c1c;
+  --shadow: 0 8px 24px rgb(80 60 30 / 0.1);
+  color-scheme: light;
+}
+
+:root {
+  --accent: #6366f1;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface2);
+  --color-line: var(--border);
+  --color-fg: var(--text);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-pos: var(--pos);
+  --color-neg: var(--neg);
+  --shadow-card: var(--shadow);
+  --font-sans: 'Segoe UI Variable', 'Segoe UI', system-ui, sans-serif;
+}
+
+@layer base {
+  *,
+  ::before,
+  ::after {
+    border-color: var(--border);
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-sans);
+    font-size: 14px;
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
+    transition:
+      background-color 0.3s,
+      color 0.3s;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  button:disabled {
+    cursor: not-allowed;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 6px;
+  }
+}

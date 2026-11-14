@@ -1,0 +1,49 @@
+appId: com.portfoliotracker.app
+productName: Portfolio Tracker
+copyright: Osobní projekt
+directories:
+  buildResources: build
+  output: dist
+files:
+  - '!**/.vscode/*'
+  - '!src/*'
+  - '!docs/*'
+  - '!electron.vite.config.{js,ts,mjs,cjs}'
+  - '!vitest.config.{js,ts,mjs,cjs}'
+  - '!vitest.config.mts'
+  - '!{.eslintcache,eslint.config.mjs,.prettierignore,.prettierrc.yaml,dev-app-update.yml,CHANGELOG.md,README.md}'
+  - '!{.env,.env.*,.npmrc,pnpm-lock.yaml}'
+  - '!{tsconfig.json,tsconfig.node.json,tsconfig.web.json}'
+  - '!data/**'
+  - '!dist/**'
+  # Osobní data nikdy nepatří do balíčku.
+  - '!*transakce*.json'
+  - '!**/*transakce*.json'
+  - '!.claude/**'
+  - '!.github/**'
+asarUnpack:
+  - resources/**
+win:
+  executableName: portfolio-tracker
+  icon: build/icon.ico
+  target:
+    - target: nsis
+      arch: x64
+    - target: portable
+      arch: x64
+nsis:
+  # Instalace jen pro aktuálního uživatele (bez práv správce), s volbou složky.
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  language: '1029'
+  artifactName: ${name}-${version}-setup.${ext}
+  shortcutName: ${productName}
+  uninstallDisplayName: ${productName}
+  createDesktopShortcut: always
+  # Odinstalace nesmaže data v %APPDATA%\portfolio-tracker (transakce a zálohy).
+  deleteAppDataOnUninstall: false
+portable:
+  artifactName: ${name}-${version}-portable.${ext}
+npmRebuild: false
+publish: null
