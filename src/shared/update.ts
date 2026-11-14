@@ -9,6 +9,8 @@ export type UpdateState =
   | { status: 'up-to-date' }
   | { status: 'downloading'; version: string; percent: number }
   | { status: 'ready'; version: string }
+  /** Instalace se spouští: aplikace se za chvíli zavře a po instalaci sama znovu spustí. */
+  | { status: 'installing'; version: string }
   | { status: 'error'; message: string }
 
 export const UPDATE_DISABLED_TEXT: Record<'dev' | 'portable', string> = {
@@ -31,7 +33,19 @@ export function updateStatusText(state: UpdateState): string {
       return `Stahuji verzi ${state.version} (${state.percent} %)…`
     case 'ready':
       return `Verze ${state.version} je stažená a nainstaluje se po restartu aplikace.`
+    case 'installing':
+      return `Instaluji verzi ${state.version}…`
     case 'error':
       return state.message
   }
+}
+
+/**
+ * Věta po spuštění nové verze (aktualizace proběhla): `previous` je verze naposledy spuštěná,
+ * `current` ta, která běží teď. Prázdná předchozí verze (první spuštění) ani stejná verze
+ * žádnou zprávu nevyvolá.
+ */
+export function versionChangeNotice(previous: string, current: string): string | null {
+  if (!previous || !current || previous === current) return null
+  return `Aplikace byla aktualizována na verzi ${current} (předtím ${previous}). Seznam změn najdeš v Nastavení → Aplikace.`
 }

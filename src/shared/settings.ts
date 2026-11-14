@@ -236,6 +236,8 @@ export const settingsSchema = z.object({
   realValues: z.boolean().catch(false),
   /** Automaticky hledat a stahovat nové verze aplikace (GitHub Releases). */
   autoUpdate: z.boolean().catch(true),
+  /** Verze aplikace, která byla naposledy spuštěná (pro hlášku po aktualizaci); prázdné = ještě žádná. */
+  lastVersion: z.string().max(40).catch(''),
   /** Lokální AI pro měsíční shrnutí (výchozí vypnuto). */
   ai: aiSchema.catch(DEFAULT_AI),
   /** Rozsah článků na obrazovce Shrnutí portfolia. */
@@ -261,6 +263,7 @@ export const settingsPatchSchema = z
     benchmark: benchmarkTickerSchema,
     realValues: z.boolean(),
     autoUpdate: z.boolean(),
+    lastVersion: z.string().max(40),
     ai: aiSchema,
     summary: summarySettingsSchema
   })

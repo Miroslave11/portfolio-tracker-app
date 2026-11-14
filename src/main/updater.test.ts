@@ -10,13 +10,15 @@ class FakeUpdater extends EventEmitter implements UpdaterLike {
   allowPrerelease = true
   checks = 0
   installed = 0
+  installArgs: unknown[] = []
   onCheck: () => Promise<unknown> = async () => undefined
   checkForUpdates(): Promise<unknown> {
     this.checks++
     return this.onCheck()
   }
-  quitAndInstall(): void {
+  quitAndInstall(isSilent?: boolean, isForceRunAfter?: boolean): void {
     this.installed++
+    this.installArgs = [isSilent, isForceRunAfter]
   }
 }
 
@@ -32,6 +34,7 @@ function setup(
     isEnabled: typeof enabled === 'function' ? enabled : () => enabled,
     onState: (s) => states.push(s),
     startDelayMs: 1000,
+    installDelayMs: 100,
     intervalMs: 5000
   })
   return { fake, states, mgr }
@@ -104,17 +107,33 @@ describe('createUpdateManager', () => {
     expect(mgr.getState()).toEqual({ status: 'ready', version: '2.0.0' })
   })
 
-  it('install restartuje jen když je verze připravená', async () => {
-    const { fake, mgr } = setup()
-    mgr.install()
-    expect(fake.installed).toBe(0)
-    fake.onCheck = async () => {
-      fake.emit('update-available', { version: '2.0.0' })
-      fake.emit('update-downloaded', { version: '2.0.0' })
+  it('install: nejdřív stav „instaluji“ (okno v aplikaci), po prodlevě viditelný instalátor', async () => {
+    vi.useFakeTimers()
+    try {
+      const { fake, states, mgr } = setup()
+      mgr.install() // není co instalovat
+      await vi.advanceTimersByTimeAsync(1000)
+      expect(fake.installed).toBe(0)
+      expect(mgr.getState()).toEqual({ status: 'idle' })
+
+      fake.onCheck = async () => {
+        fake.emit('update-available', { version: '2.0.0' })
+        fake.emit('update-downloaded', { version: '2.0.0' })
+      }
+      await mgr.checkNow()
+      mgr.install()
+      expect(mgr.getState()).toEqual({ status: 'installing', version: '2.0.0' })
+      expect(states.at(-1)).toEqual({ status: 'installing', version: '2.0.0' })
+      expect(fake.installed).toBe(0) // uživatel má čas přečíst, co se bude dít
+      await vi.advanceTimersByTimeAsync(100)
+      expect(fake.installed).toBe(1)
+      expect(fake.installArgs).toEqual([false, true]) // viditelný průběh, po dokončení spustit
+      // další kontrola ani chyba stav „instaluji“ nepřepíše
+      await mgr.checkNow()
+      expect(fake.checks).toBe(1)
+    } finally {
+      vi.useRealTimers()
     }
-    await mgr.checkNow()
-    mgr.install()
-    expect(fake.installed).toBe(1)
   })
 
   it.each(['dev', 'portable'] as const)('režim %s: nikdy nehledá a hlásí důvod', async (mode) => {

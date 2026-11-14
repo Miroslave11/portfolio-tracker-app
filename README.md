@@ -2,7 +2,7 @@
 
 Osobní desktopová aplikace pro sledování dlouhodobého ETF portfolia napříč brokery Freedom24, XTB a Degiro. Inspirováno aplikací Portfolio Performance, ale úzce na míru.
 
-**Stav:** vydána verze **1.5.1** ([co obsahuje](CHANGELOG.md), [stažení instalátoru](https://github.com/Miroslave11/portfolio-tracker-app/releases/latest)). Další vývoj podle [plánu rozšíření](docs/04-plan-rozsireni.md). Dokumentace:
+**Stav:** vydána verze **1.5.2** ([co obsahuje](CHANGELOG.md), [stažení instalátoru](https://github.com/Miroslave11/portfolio-tracker-app/releases/latest)). Další vývoj podle [plánu rozšíření](docs/04-plan-rozsireni.md). Dokumentace:
 
 - [Rozsah V1](docs/00-rozsah-mvp.md)
 - [Metaplán – architektura](docs/01-metaplan.md)
@@ -36,7 +36,7 @@ se po přeinstalování najdou. Zálohu si lze otevřít v Nastavení → Data a
 
 ## Automatické aktualizace
 
-Nainstalovaná aplikace při spuštění a pak každé 4 hodiny hledá novější vydání na GitHubu, stáhne ho na pozadí a po restartu nainstaluje (tlačítko „Restartovat a nainstalovat“, nebo při zavření aplikace). Vypnout je lze v Nastavení → Aplikace, tamtéž je ruční kontrola. Při vývoji (`npm run dev`) se aktualizace nehledají. Aktualizace se ověřují kontrolním součtem, ale aplikace není podepsaná.
+Nainstalovaná aplikace při spuštění a pak každé 4 hodiny hledá novější vydání na GitHubu, stáhne ho na pozadí a po restartu nainstaluje (tlačítko „Restartovat a nainstalovat“ ukáže okno s vysvětlením a pak instalátor s průběhem; nebo se nainstaluje při zavření aplikace). Vypnout je lze v Nastavení → Aplikace, tamtéž je ruční kontrola. Při vývoji (`npm run dev`) se aktualizace nehledají. Aktualizace se ověřují kontrolním součtem, ale aplikace není podepsaná.
 
 Vývojový běh přes `spustit.bat` používá vlastní data ve složce `vyvoj-data`, takže nesahá na data nainstalované aplikace.
 

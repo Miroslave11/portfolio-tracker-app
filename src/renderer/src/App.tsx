@@ -8,6 +8,7 @@ import { Sidebar } from './components/Sidebar'
 import { Toast } from './components/Toast'
 import { TransactionDialog } from './components/TransactionDialog'
 import { TopBar } from './components/TopBar'
+import { UpdateInstallOverlay } from './components/UpdateInstallOverlay'
 import { UpdateBanner } from './components/UpdateBanner'
 import { screenMeta } from './screenMeta'
 import { PlaceholderScreen } from './screens/PlaceholderScreen'
@@ -21,6 +22,7 @@ import { TaxesScreen } from './screens/TaxesScreen'
 import { SettingsScreen } from './screens/SettingsScreen'
 import { SummaryScreen } from './screens/SummaryScreen'
 import { TransactionsScreen } from './screens/TransactionsScreen'
+import { versionChangeNotice } from '../../shared/update'
 import { useApp } from './store'
 import { useAutoSummaries } from './summaries'
 import { useApplyTheme } from './useApplyTheme'
@@ -51,6 +53,24 @@ function useUpdateState(): void {
   }, [setUpdate])
 }
 
+/** Po spuštění nové verze (po aktualizaci) ukáže zprávu a zapamatuje si běžící verzi. */
+function useVersionNotice(): void {
+  const showNotice = useApp((s) => s.showNotice)
+  useEffect(() => {
+    void (async () => {
+      const [settings, current] = await Promise.all([
+        window.api.getSettings(),
+        window.api.getAppVersion()
+      ])
+      const notice = versionChangeNotice(settings.lastVersion, current)
+      if (settings.lastVersion !== current) {
+        await window.api.updateSettings({ lastVersion: current })
+      }
+      if (notice) showNotice(notice)
+    })()
+  }, [showNotice])
+}
+
 /** Ctrl+K paleta příkazů, Ctrl+N nový nákup, Ctrl+M měsíční nákup. */
 function useGlobalShortcuts(): void {
   useEffect(() => {
@@ -79,11 +99,13 @@ function App(): React.JSX.Element {
   useAutoRefreshPrices()
   useGlobalShortcuts()
   useUpdateState()
+  useVersionNotice()
   useAutoSummaries()
   const screen = useApp((s) => s.screen)
 
   return (
     <div className="grid h-screen grid-cols-[220px_1fr]">
+      <UpdateInstallOverlay />
       <Sidebar />
       <main className="flex min-h-0 flex-col overflow-hidden">
         <UpdateBanner />

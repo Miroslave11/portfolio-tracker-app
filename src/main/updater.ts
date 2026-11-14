@@ -3,6 +3,7 @@ import type { UpdateState } from '../shared/update'
 /** Výchozí odstup mezi kontrolami za běhu aplikace a prodleva po spuštění. */
 export const CHECK_INTERVAL_MS = 4 * 60 * 60 * 1000
 export const START_DELAY_MS = 20_000
+export const INSTALL_DELAY_MS = 2500
 
 /** Jen to, co z `electron-updater` potřebujeme (v testech ho nahradí falešný objekt). */
 export interface UpdaterLike {
@@ -23,6 +24,8 @@ export interface UpdateManagerOptions {
   isEnabled: () => boolean | Promise<boolean>
   onState: (state: UpdateState) => void
   startDelayMs?: number
+  /** Prodleva mezi zobrazením „Instaluji…“ a zavřením aplikace (aby si to uživatel stihl přečíst). */
+  installDelayMs?: number
   intervalMs?: number
 }
 
@@ -116,7 +119,12 @@ export function createUpdateManager(opts: UpdateManagerOptions): UpdateManager {
 
   const checkNow = async (): Promise<UpdateState> => {
     if (mode !== 'enabled') return state
-    if (state.status === 'checking' || state.status === 'downloading' || state.status === 'ready') {
+    if (
+      state.status === 'checking' ||
+      state.status === 'downloading' ||
+      state.status === 'ready' ||
+      state.status === 'installing'
+    ) {
       return state
     }
     set({ status: 'checking' })
@@ -147,7 +155,10 @@ export function createUpdateManager(opts: UpdateManagerOptions): UpdateManager {
     },
     checkNow,
     install() {
-      if (state.status === 'ready') updater.quitAndInstall(true, true)
+      if (state.status !== 'ready') return
+      set({ status: 'installing', version: state.version })
+      // Instalátor se spustí viditelně (okno s průběhem), po dokončení se aplikace spustí znovu.
+      setTimeout(() => updater.quitAndInstall(false, true), opts.installDelayMs ?? INSTALL_DELAY_MS)
     },
     stop() {
       clearTimeout(first)

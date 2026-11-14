@@ -2,6 +2,18 @@
 
 Všechny podstatné změny aplikace Portfolio Tracker. Formát vychází z [Keep a Changelog](https://keepachangelog.com/cs/1.1.0/), verze podle [sémantického verzování](https://semver.org/lang/cs/).
 
+## [1.5.2] – 2026-11-14
+
+Srozumitelnější instalace aktualizace.
+
+### Změněno
+
+- **Instalace aktualizace už není skrytá.** Po kliknutí na „Restartovat a nainstalovat“ aplikace nejdřív ukáže okno „Instaluji verzi …“ s vysvětlením, pak se zavře a otevře se okno instalátoru s průběhem (dřív běžela instalace potichu a nebylo nic vidět). Po dokončení stačí kliknout na „Dokončit“ a aplikace se sama znovu spustí. Data zůstávají nedotčená.
+
+### Přidáno
+
+- Po spuštění nové verze se ukáže zpráva „Aplikace byla aktualizována na verzi …“; v Nastavení → Aplikace je odkaz na seznam změn aktuální verze.
+
 ## [1.5.1] – 2026-11-14
 
 Přehlednější Nastavení.

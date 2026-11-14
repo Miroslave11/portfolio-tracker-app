@@ -25,7 +25,10 @@ export function UpdateSettings(): React.JSX.Element {
     }
   }
 
-  const busy = update.status === 'checking' || update.status === 'downloading'
+  const busy =
+    update.status === 'checking' ||
+    update.status === 'downloading' ||
+    update.status === 'installing'
   const text = checkError ?? updateStatusText(update)
 
   return (

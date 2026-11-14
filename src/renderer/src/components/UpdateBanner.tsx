@@ -16,7 +16,7 @@ export function UpdateBanner(): React.JSX.Element | null {
       </div>
     )
   }
-  if (update.status !== 'ready') return null
+  if (update.status !== 'ready') return null // při „installing“ je celoobrazovkové okno
 
   return (
     <div
