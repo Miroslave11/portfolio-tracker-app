@@ -12,7 +12,6 @@ import {
 } from '../../../core/money'
 import type { SeriesPoint, Summary } from '../../../core/portfolio-calc'
 import { Card } from '../components/Card'
-import { MonthlySummaryCard } from '../components/MonthlySummaryCard'
 import { RealModeBanner } from '../components/RealModeBanner'
 import { Kpi, Tip } from '../components/Kpi'
 import { toneClass } from '../tone'
@@ -304,8 +303,6 @@ export function OverviewScreen(): React.JSX.Element {
           }
         />
       </div>
-
-      <MonthlySummaryCard />
 
       <ValueChart series={calc.series} currency={currency} />
 

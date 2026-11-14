@@ -107,10 +107,9 @@ export function AiSettingsCard(): React.JSX.Element {
   return (
     <Card title="Umělá inteligence (volitelné)">
       <p className="mb-3 text-[13px] text-muted">
-        Shrnutí portfolia fungují i bez AI (strohý text ze šablon). S modelem se text na Přehledu
-        přeformuluje a v článcích na obrazovce Shrnutí napíše plynulejší V kostce, Komentář a
-        Výhled. Všechna čísla počítá aplikace a každé číslo v textu od modelu se ověří – nesedí-li,
-        ta část se zahodí a zůstane šablona.
+        Shrnutí portfolia fungují i bez AI (strohý text ze šablon). S modelem napíše plynulejší V
+        kostce, Komentář a Výhled v článcích na obrazovce Shrnutí. Všechna čísla počítá aplikace a
+        každé číslo v textu od modelu se ověří – nesedí-li, ta část se zahodí a zůstane šablona.
       </p>
       <label className="flex cursor-pointer items-center gap-2">
         <input
