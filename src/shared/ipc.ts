@@ -17,6 +17,7 @@ import type { ExportRequest, ExportResult } from './export'
 import type { PriceCache, PriceUpdateResult } from './prices'
 import type { Settings, SettingsPatch } from './settings'
 import type { SummaryArticle } from './summary'
+import type { UpdateState } from './update'
 
 /** Názvy IPC kanálů sdílené mezi main a preload. */
 export const IPC = {
@@ -38,7 +39,12 @@ export const IPC = {
   aiRewrite: 'ai:rewrite',
   aiArticle: 'ai:article',
   summariesGet: 'summaries:get',
-  summariesSave: 'summaries:save'
+  summariesSave: 'summaries:save',
+  updateGet: 'update:get',
+  updateCheck: 'update:check',
+  updateInstall: 'update:install',
+  /** Událost main → renderer: změnil se stav aktualizací. */
+  updateEvent: 'update:state'
 } as const
 
 /** API, které preload vystavuje rendereru jako `window.api`. */
@@ -76,4 +82,12 @@ export interface PortfolioApi {
   getSummaries(): Promise<SummaryArticle[]>
   /** Uloží nové nebo přegenerované články (stejné id se nahradí) a vrátí všechny. */
   saveSummaries(articles: SummaryArticle[]): Promise<SummaryArticle[]>
+  /** Aktuální stav automatických aktualizací. */
+  getUpdateState(): Promise<UpdateState>
+  /** Zkontroluje novou verzi teď (funguje i při vypnutém automatickém hledání). */
+  checkForUpdates(): Promise<UpdateState>
+  /** Zavře aplikaci a nainstaluje stažené vydání (jen když je připravené). */
+  installUpdate(): Promise<void>
+  /** Odběr změn stavu aktualizací; vrací funkci pro odhlášení. */
+  onUpdateState(listener: (state: UpdateState) => void): () => void
 }

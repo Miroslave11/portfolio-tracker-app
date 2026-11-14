@@ -1,5 +1,6 @@
-import { contextBridge, ipcRenderer } from 'electron'
+import { contextBridge, ipcRenderer, type IpcRendererEvent } from 'electron'
 import { IPC, type PortfolioApi } from '../shared/ipc'
+import type { UpdateState } from '../shared/update'
 
 const api: PortfolioApi = {
   getAppVersion: () => ipcRenderer.invoke(IPC.appVersion),
@@ -20,7 +21,15 @@ const api: PortfolioApi = {
   aiRewrite: (request) => ipcRenderer.invoke(IPC.aiRewrite, request),
   aiWriteArticle: (request) => ipcRenderer.invoke(IPC.aiArticle, request),
   getSummaries: () => ipcRenderer.invoke(IPC.summariesGet),
-  saveSummaries: (articles) => ipcRenderer.invoke(IPC.summariesSave, articles)
+  saveSummaries: (articles) => ipcRenderer.invoke(IPC.summariesSave, articles),
+  getUpdateState: () => ipcRenderer.invoke(IPC.updateGet),
+  checkForUpdates: () => ipcRenderer.invoke(IPC.updateCheck),
+  installUpdate: () => ipcRenderer.invoke(IPC.updateInstall),
+  onUpdateState: (listener) => {
+    const handler = (_e: IpcRendererEvent, state: UpdateState): void => listener(state)
+    ipcRenderer.on(IPC.updateEvent, handler)
+    return () => ipcRenderer.removeListener(IPC.updateEvent, handler)
+  }
 }
 
 contextBridge.exposeInMainWorld('api', api)

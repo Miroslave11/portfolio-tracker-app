@@ -18,22 +18,27 @@ Electron · electron-vite · React · TypeScript · Vitest · ESLint/Prettier ·
 
 ```bash
 npm install
-npm run dev        # spuštění s hot reloadem
+npm run dev        # spuštění s hot reloadem (nebo dvojklik na spustit.bat – s vlastními vývojovými daty)
 npm test           # unit testy
 npm run lint       # ESLint
 npm run typecheck  # kontrola typů
-npm run build:win  # instalátor + portable .exe do složky dist/
+npm run build:win  # instalátor (setup.exe) a latest.yml do složky dist/
 ```
 
 ## Instalace
 
-Instalátor (`portfolio-tracker-<verze>-setup.exe`) i přenosná verze (`…-portable.exe`) se sestavují příkazem `npm run build:win`
-a na GitHubu v CI jako artefakt „portfolio-tracker-windows“. Instalace je jen pro aktuálního uživatele (bez práv správce).
+Instalátor (`portfolio-tracker-<verze>-setup.exe`) najdeš na stránce [Releases](https://github.com/Miroslave11/portfolio-tracker-app/releases/latest); sestavit ho jde i příkazem `npm run build:win`. Instalace je jen pro aktuálního uživatele (bez práv správce).
 Aplikace zatím **není podepsaná**, takže ji Windows (SmartScreen) při prvním spuštění může označit jako neznámou:
 zvol „Další informace → Přesto spustit“.
 
 Data zůstávají v `%APPDATA%portfolio-tracker` – instalace, aktualizace ani odinstalace je nemažou, takže
 se po přeinstalování najdou. Zálohu si lze otevřít v Nastavení → Data.
+
+## Automatické aktualizace
+
+Nainstalovaná aplikace při spuštění a pak každé 4 hodiny hledá novější vydání na GitHubu, stáhne ho na pozadí a po restartu nainstaluje (tlačítko „Restartovat a nainstalovat“, nebo při zavření aplikace). Vypnout je lze v Nastavení → Obecné, tamtéž je ruční kontrola. Při vývoji (`npm run dev`) se aktualizace nehledají. Aktualizace se ověřují kontrolním součtem, ale aplikace není podepsaná.
+
+Vývojový běh přes `spustit.bat` používá vlastní data ve složce `vyvoj-data`, takže nesahá na data nainstalované aplikace.
 
 ## Data
 

@@ -1,6 +1,7 @@
 import { Check, FolderOpen } from 'lucide-react'
 import { ACCENTS, THEMES, resolveTheme, themeInfo } from '../../../core/theme'
 import { SummarySettingsCard } from '../components/SummarySettingsCard'
+import { UpdateSettings } from '../components/UpdateSettings'
 import { AiSettingsCard } from '../components/AiSettingsCard'
 import { Card } from '../components/Card'
 import { Segmented } from '../components/Segmented'
@@ -142,6 +143,7 @@ export function SettingsScreen(): React.JSX.Element {
             />
             Automaticky stahovat kurzy (při spuštění a každou hodinu)
           </label>
+          <UpdateSettings />
           <p className="mt-3 text-xs text-muted">
             Data se ukládají do %APPDATA%\portfolio-tracker. Import transakcí najdeš na obrazovce
             Obchody.

@@ -2,6 +2,24 @@
 
 Všechny podstatné změny aplikace Portfolio Tracker. Formát vychází z [Keep a Changelog](https://keepachangelog.com/cs/1.1.0/), verze podle [sémantického verzování](https://semver.org/lang/cs/).
 
+## [1.5.0] – 2026-11-14
+
+Automatické aktualizace.
+
+### Přidáno
+
+- **Automatické aktualizace:** nainstalovaná aplikace při spuštění a pak každé 4 hodiny hledá novější vydání na GitHubu, stáhne ho na pozadí a ukáže pruh „Restartovat a nainstalovat“ (jinak se nainstaluje při zavření aplikace). V Nastavení → Obecné je přepínač, ruční kontrola a stav. Data v %APPDATA% zůstávají nedotčená. Při hledání se kromě čísla verze nic neodesílá.
+- **spustit.bat** pro vývoj používá vlastní složku dat (`vyvoj-data`), aby nesahal na data nainstalované aplikace.
+
+### Změněno
+
+- Vydání obsahuje jen instalátor (`setup.exe`); přenosná verze (`portable.exe`) se už nevydává, protože se neumí aktualizovat.
+
+### Upozornění
+
+- **Verze 1.5.0 je první s aktualizacemi:** starší verze (1.4.0 a méně) je neobsahují, proto 1.5.0 nainstaluj ručně přes stávající instalaci. Od ní dál už se aplikace aktualizuje sama.
+- Aplikace není digitálně podepsaná. Aktualizace se ověřují kontrolním součtem z vydání, ale ne podpisem.
+
 ## [1.4.0] – 2026-11-14
 
 Shrnutí portfolia, cílová alokace, export a AI texty.

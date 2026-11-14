@@ -234,6 +234,8 @@ export const settingsSchema = z.object({
   benchmark: benchmarkTickerSchema.catch(DEFAULT_BENCHMARK),
   /** Zobrazovat hodnoty v dnešních cenách (po inflaci). */
   realValues: z.boolean().catch(false),
+  /** Automaticky hledat a stahovat nové verze aplikace (GitHub Releases). */
+  autoUpdate: z.boolean().catch(true),
   /** Lokální AI pro měsíční shrnutí (výchozí vypnuto). */
   ai: aiSchema.catch(DEFAULT_AI),
   /** Rozsah článků na obrazovce Shrnutí portfolia. */
@@ -258,6 +260,7 @@ export const settingsPatchSchema = z
     rebalance: rebalanceSchema,
     benchmark: benchmarkTickerSchema,
     realValues: z.boolean(),
+    autoUpdate: z.boolean(),
     ai: aiSchema,
     summary: summarySettingsSchema
   })

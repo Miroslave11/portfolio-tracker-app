@@ -4,6 +4,7 @@ import type { Portfolio, SecurityMetaPatch, TransactionDraft, TxType } from '../
 import { EMPTY_PRICE_CACHE, type PriceCache, type PriceUpdateReport } from '../../shared/prices'
 import { DEFAULT_SETTINGS, type Settings, type SettingsPatch } from '../../shared/settings'
 import type { SummaryArticle } from '../../shared/summary'
+import type { UpdateState } from '../../shared/update'
 
 export const SCREENS = [
   'overview',
@@ -61,6 +62,9 @@ interface AppState {
   /** Článek, pro který právě píše text lokální AI; `null` = nic se nepíše. */
   summaryAiBusy: string | null
   setSummaryAiBusy(id: string | null): void
+  /** Stav automatických aktualizací aplikace (z hlavního procesu). */
+  update: UpdateState
+  setUpdate(update: UpdateState): void
   initSummaries(summaries: SummaryArticle[]): void
   /** Uloží nové nebo přegenerované články; při chybě vyhodí výjimku. */
   saveSummaries(articles: SummaryArticle[]): Promise<void>
@@ -107,6 +111,8 @@ export const useApp = create<AppState>((set, get) => ({
   summaryFocus: null,
   summaryAiBusy: null,
   setSummaryAiBusy: (summaryAiBusy) => set({ summaryAiBusy }),
+  update: { status: 'idle' },
+  setUpdate: (update) => set({ update }),
   initSummaries: (summaries) => set({ summaries }),
   saveSummaries: async (articles) => {
     set({ summaries: await window.api.saveSummaries(articles) })

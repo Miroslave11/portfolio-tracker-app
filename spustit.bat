@@ -1,6 +1,9 @@
 @echo off
 rem Spusti Portfolio Tracker ve vyvojovem rezimu (okno aplikace se otevre samo).
 rem Pri prvnim spusteni (nebo kdyz chybi slozka node_modules) nejdriv nainstaluje zavislosti.
+rem Vyvoj ma VLASTNI data ve slozce vyvoj-data (v .gitignore), takze nesahne na data
+rem nainstalovane aplikace v %APPDATA%\portfolio-tracker. Po prvnim spusteni si tam naimportujte
+rem ukazkovy export z examples\ukazka-portfolio-performance.json nebo vlastni data.
 chcp 65001 >nul
 cd /d "%~dp0"
 
@@ -21,7 +24,8 @@ if not exist node_modules (
   )
 )
 
-echo Spoustim Portfolio Tracker...
+set "PT_DATA_DIR=%~dp0vyvoj-data"
+echo Spoustim Portfolio Tracker (vyvojova data: %PT_DATA_DIR%)...
 call npm run dev
 if errorlevel 1 (
   echo.

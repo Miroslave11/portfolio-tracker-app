@@ -19,11 +19,13 @@ import type { PriceUpdateResult } from '../shared/prices'
 import { aiArticleRequestSchema, aiRewriteRequestSchema } from '../shared/ai'
 import { writeArticleTexts } from './ai-article'
 import { aiStatus, makeGenerator, modelName } from './ai-provider'
+import { autoUpdater } from 'electron-updater'
 import { runExport } from './export-handler'
 import { GENERATE_TIMEOUT_MS, rewriteSummary } from './ollama'
 import { loadPortfolio, readImportFile, savePortfolio } from './portfolio-store'
 import { loadPriceCache, updatePrices, type Fetcher } from './price-service'
 import { loadSummaries, saveSummaries } from './summary-store'
+import { createUpdateManager, type UpdateManager } from './updater'
 
 /**
  * Stahování přes síťovou vrstvu Chromia (net.fetch): na rozdíl od holého Node používá
@@ -137,7 +139,24 @@ async function previewImport(window: BrowserWindow | null): Promise<ImportPrevie
 
 const AI_OFF_MESSAGE = 'AI je vypnutá (Nastavení → Umělá inteligence).'
 
+/** Automatické aktualizace (jen v nainstalované aplikaci; ve vývoji a v přenosné verzi se nehledá). */
+let updates: UpdateManager | null = null
+function setupUpdates(): UpdateManager {
+  updates = createUpdateManager({
+    updater: autoUpdater,
+    mode: !app.isPackaged ? 'dev' : process.env['PORTABLE_EXECUTABLE_DIR'] ? 'portable' : 'enabled',
+    isEnabled: async () => (await loadSettings(dataDir())).autoUpdate,
+    onState: (state) => {
+      for (const win of BrowserWindow.getAllWindows()) win.webContents.send(IPC.updateEvent, state)
+    }
+  })
+  return updates
+}
+
 function registerIpc(): void {
+  ipcMain.handle(IPC.updateGet, () => updates?.getState() ?? { status: 'idle' })
+  ipcMain.handle(IPC.updateCheck, () => updates?.checkNow() ?? { status: 'idle' })
+  ipcMain.handle(IPC.updateInstall, () => updates?.install())
   ipcMain.handle(IPC.appVersion, () => app.getVersion())
 
   ipcMain.handle(IPC.settingsGet, () => loadSettings(dataDir()))
@@ -271,8 +290,10 @@ app.whenReady().then(() => {
     optimizer.watchWindowShortcuts(window)
   })
 
+  setupUpdates()
   registerIpc()
   createWindow()
+  updates?.start()
 
   app.on('activate', () => {
     if (BrowserWindow.getAllWindows().length === 0) createWindow()

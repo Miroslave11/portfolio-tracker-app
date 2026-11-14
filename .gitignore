@@ -13,3 +13,6 @@ data/
 
 # Lokální testy na skutečných datech (obsahují osobní čísla)
 *.local.test.ts
+
+# Data vývojového běhu (spustit.bat)
+vyvoj-data/

@@ -8,6 +8,7 @@ files:
   - '!**/.vscode/*'
   - '!src/*'
   - '!docs/*'
+  - '!examples/**'
   - '!electron.vite.config.{js,ts,mjs,cjs}'
   - '!vitest.config.{js,ts,mjs,cjs}'
   - '!vitest.config.mts'
@@ -29,8 +30,6 @@ win:
   target:
     - target: nsis
       arch: x64
-    - target: portable
-      arch: x64
 nsis:
   # Instalace jen pro aktuálního uživatele (bez práv správce), s volbou složky.
   oneClick: false
@@ -43,7 +42,10 @@ nsis:
   createDesktopShortcut: always
   # Odinstalace nesmaže data v %APPDATA%\portfolio-tracker (transakce a zálohy).
   deleteAppDataOnUninstall: false
-portable:
-  artifactName: ${name}-${version}-portable.${ext}
 npmRebuild: false
-publish: null
+# Automatické aktualizace: electron-updater hledá nové vydání v GitHub Releases (veřejné repo, bez tokenu).
+# Vydání musí obsahovat latest.yml a *.blockmap vedle instalátoru (viz .github/workflows/release.yml).
+publish:
+  provider: github
+  owner: Miroslave11
+  repo: portfolio-tracker-app

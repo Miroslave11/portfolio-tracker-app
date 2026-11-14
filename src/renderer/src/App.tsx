@@ -8,6 +8,7 @@ import { Sidebar } from './components/Sidebar'
 import { Toast } from './components/Toast'
 import { TransactionDialog } from './components/TransactionDialog'
 import { TopBar } from './components/TopBar'
+import { UpdateBanner } from './components/UpdateBanner'
 import { screenMeta } from './screenMeta'
 import { PlaceholderScreen } from './screens/PlaceholderScreen'
 import { AllocationScreen } from './screens/AllocationScreen'
@@ -41,6 +42,15 @@ function useAutoRefreshPrices(): void {
   }, [auto, hasSecurities, transactions, refresh])
 }
 
+/** Sleduje stav automatických aktualizací z hlavního procesu. */
+function useUpdateState(): void {
+  const setUpdate = useApp((s) => s.setUpdate)
+  useEffect(() => {
+    void window.api.getUpdateState().then(setUpdate)
+    return window.api.onUpdateState(setUpdate)
+  }, [setUpdate])
+}
+
 /** Ctrl+K paleta příkazů, Ctrl+N nový nákup, Ctrl+M měsíční nákup. */
 function useGlobalShortcuts(): void {
   useEffect(() => {
@@ -68,6 +78,7 @@ function App(): React.JSX.Element {
   useApplyTheme()
   useAutoRefreshPrices()
   useGlobalShortcuts()
+  useUpdateState()
   useAutoSummaries()
   const screen = useApp((s) => s.screen)
 
@@ -75,6 +86,7 @@ function App(): React.JSX.Element {
     <div className="grid h-screen grid-cols-[220px_1fr]">
       <Sidebar />
       <main className="flex min-h-0 flex-col overflow-hidden">
+        <UpdateBanner />
         <TopBar />
         <AnimatePresence mode="wait">
           <motion.div
