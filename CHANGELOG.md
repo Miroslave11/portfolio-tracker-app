@@ -2,6 +2,27 @@
 
 Všechny podstatné změny aplikace Portfolio Tracker. Formát vychází z [Keep a Changelog](https://keepachangelog.com/cs/1.1.0/), verze podle [sémantického verzování](https://semver.org/lang/cs/).
 
+## [1.4.0] – 2026-11-14
+
+Shrnutí portfolia, cílová alokace, export a AI texty.
+
+### Přidáno
+
+- **Shrnutí portfolia:** nová obrazovka s články za měsíc, kvartál, pololetí a rok. Článek vznikne sám po skončení období (chybějící se dohoní, starší jde vytvořit zpětně) a uloží se tak, jak byl vytvořen. Obsahuje „V kostce“, hlavní čísla, graf průběhu, rozklad změny, tabulku ETF, nákupy proti plánu, srovnání s trhem, riziko, alokaci proti cíli, cestu k cíli s odhadem, vliv kurzu EUR/CZK, časový test a výhled; u delších období tabulku po měsících a „Rok v číslech“. Rozsah a sekce se nastavují v Nastavení → Shrnutí portfolia.
+- **Texty od AI (volitelné):** „V kostce“, „Komentář“ a „Výhled“ může napsat umělá inteligence – lokální **Ollama**, nebo **Claude Code** z předplatného (bez API klíče). Každé číslo v textu se ověří proti výpočtu, část s chybou se zahodí a zůstane šablona. Nastavuje se, co AI píše, délka komentáře a styl. Pozor: s Claude Code se fakta o portfoliu odesílají Anthropicu, s Ollamou nic neopouští počítač.
+- **PDF článku:** tlačítko PDF uloží celý článek na A4 podle zapnutých sekcí, včetně grafů.
+- **Cílová alokace:** cílové podíly podle indexu a rozdělení měsíčního nákupu jen dokupováním.
+- **Export:** CSV, Excel a PDF měsíční report a záloha dat.
+- **Paleta příkazů (Ctrl+K)** a zkratky Ctrl+N a Ctrl+M.
+- **Ukázkový export** `examples/ukazka-portfolio-performance.json` k vyzkoušení bez vlastních dat.
+
+### Změněno
+
+- Obrazovka **Cíl** a položka menu se jmenují jen „Cíl“ (částku nastavíš na obrazovce Cíl); výchozí cíl pro nové nastavení je 5 mil. Kč.
+- Z Přehledu je odstraněna karta Měsíční shrnutí; shrnutí jsou na obrazovce Shrnutí.
+
+Texty od AI a výhled jsou informativní, nejde o investiční doporučení.
+
 ## [1.2.0] – 2026-11-13
 
 Inflace, nejistota a plánování čerpání.
